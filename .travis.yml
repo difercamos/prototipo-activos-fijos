@@ -1,0 +1,13 @@
+language: python
+python:
+- 3.6.2
+install:
+- pip install -r requirements.txt
+script: nosetests
+deploy:
+  provider: heroku
+  api_key:
+    secure: N+S9TuZVbZNnTUefub+WvqEtfD5pAE0z/9vN0QQXpgUSfEY6DYzxJkdC9rAARD70fqv6SGUqbikXG8kC/f9mD8FVNNjwkIcoUTeKdi+2oUvbWH2lj95bPL+eqUtJZCYqwX0elJtWb7FoPvrpHcd3IjxRTesER9OM31sGyJk4wcqW2LpZP42KDxo87h4khM3SRo3bFde4Cs48nf+5Sbn6D/koRaDjuCfQUOwaFAfRs0k7hLRsiCCkI9jk7TslTb9pegNa+Qsa94fPeIibE/YdsOLYRGOO3FwIUiNIz4QaG5qyXI/w542+40Rr/UBoEgD4IyaBOdS3goumxVszrt0V13qClilQ1VGdmGRebEivvuaA20I4SwPEjFa8zZrowe0VfvUWuTuMmz91+Wou4HZa22CxDVXDJuhV20RAAJu1HBhrJOs4owbItxyMCckQ8Ec/28cgsVQrfPQ47B4y28uugwayFYBdRJuLwRcAtw56PIrHlq4qdw3k+DRizEPKRMOZG1dvKAK1oNk5EJqzOD5c6EnwmYoM4JKFUiMxxppfjy/MX7D12Yp/JVNOtzlCPzW7KFgnguPKtYQGw+vkH67MsxEA8jLVvZtdNAg/gq/k+JWpko0RbwDKQriOKC6IqMt//a802EFrywPXs+P/OQRbuTBzerEqswa2Df0kolGV6m4=
+  app: prototipo-activos-fijos
+  on:
+    repo: difercamos/prototipo-activos-fijos
