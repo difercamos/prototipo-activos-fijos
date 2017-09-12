@@ -22,3 +22,11 @@ class ActivoFijoAdmin(admin.ModelAdmin):
         'responsable',
         'centro_costo'
     )
+    fields = (
+        'tipo_activo',
+        'fecha_compra',
+        'numero_serial',
+        'numero_placa',
+        'responsable',
+        'centro_costo'
+    )

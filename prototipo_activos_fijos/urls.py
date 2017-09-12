@@ -4,7 +4,7 @@ from rest_framework.documentation import include_docs_urls
 
 
 API_TITLE = 'Activos Fijos - Grupo ASD'
-API_DESCRIPTION = 'Activos Fijos'
+API_DESCRIPTION = 'Activos Fijos - Grupo ASD'
 
 
 urlpatterns = [

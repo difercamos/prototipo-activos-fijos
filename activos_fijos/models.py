@@ -56,6 +56,13 @@ class ActivoFijo(models.Model):
         on_delete=models.CASCADE,
         related_name='activos'
     )
+    tipo_activo = models.ForeignKey(
+        TipoActivo,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name='activos'
+    )
 
     def __str__(self):
         return self.numero_placa
