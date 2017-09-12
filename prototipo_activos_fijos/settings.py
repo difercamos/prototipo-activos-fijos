@@ -9,6 +9,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
+    'rest_framework',
+    'activos_fijos.apps.ActivosFijosConfig',
+    'empleados.apps.EmpleadosConfig',
+    'ubicacion.apps.UbicacionConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
