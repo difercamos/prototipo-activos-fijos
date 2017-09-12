@@ -25,5 +25,6 @@ class ActivoFijoSerializer(serializers.ModelSerializer):
             'numero_placa',
             'codigo_rfid',
             'responsable',
-            'centro_costo'
+            'centro_costo',
+            'tipo_activo'
         )

@@ -1,7 +1,10 @@
 from django.db import models
+from django.utils import timezone
+from django.core.exceptions import ValidationError
 
 from empleados.models import Empleado
 from ubicacion.models import CentroCostos
+from activos_fijos.validators import validate_fecha_compra
 
 
 class Categoria(models.Model):
@@ -32,7 +35,10 @@ class TipoActivo(models.Model):
 
 
 class ActivoFijo(models.Model):
-    fecha_compra = models.DateTimeField(blank=True, null=True)
+    fecha_compra = models.DateTimeField(
+        blank=True,
+        null=True
+    )
     numero_serial = models.CharField(
         max_length=50,
         blank=True,
@@ -54,13 +60,13 @@ class ActivoFijo(models.Model):
     centro_costo = models.ForeignKey(
         CentroCostos,
         on_delete=models.CASCADE,
-        related_name='activos'
+        related_name='activos',
+        null=True,
+        blank=True
     )
     tipo_activo = models.ForeignKey(
         TipoActivo,
         on_delete=models.CASCADE,
-        blank=True,
-        null=True,
         related_name='activos'
     )
 
@@ -69,3 +75,7 @@ class ActivoFijo(models.Model):
 
     class Meta:
         verbose_name_plural = 'Activos fijos'
+
+    def save(self, *args, **kwargs):
+        if self.fecha_compra <= timezone.now():
+            super(ActivoFijo, self).save(*args, **kwargs)
