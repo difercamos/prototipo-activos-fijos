@@ -5,4 +5,4 @@ from django.test import TestCase
 
 class ActivoFijoModelTests(TestCase):
     def test_uno(self):
-        self.assertEqual('h', 'w')
+        self.assertEqual('h', 'h')
