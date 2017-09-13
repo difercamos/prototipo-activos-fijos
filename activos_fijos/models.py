@@ -4,7 +4,6 @@ from django.core.exceptions import ValidationError
 
 from empleados.models import Empleado
 from ubicacion.models import CentroCostos
-from activos_fijos.validators import validate_fecha_compra
 
 
 class Categoria(models.Model):
