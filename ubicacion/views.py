@@ -8,7 +8,7 @@ from ubicacion.serializers import CentroCostosSerializer
 from activos_fijos.serializers import ActivoFijoSerializer
 
 
-class CentroCostosViewSet(viewsets.ModelViewSet):
+class CentroCostosViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = CentroCostos.objects.all()
     serializer_class = CentroCostosSerializer
 

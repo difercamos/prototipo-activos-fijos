@@ -9,13 +9,13 @@ class CategoriaSerializer(serializers.ModelSerializer):
         fields = ('id', 'nombre')
 
 
-class TipoActivoSerializer(serializers.ModelSerializer):
+class TipoActivoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = TipoActivo
         fields = ('id', 'nombre', 'categoria')
 
 
-class ActivoFijoSerializer(serializers.ModelSerializer):
+class ActivoFijoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ActivoFijo
         fields = (

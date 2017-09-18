@@ -10,7 +10,7 @@ from activos_fijos.views import (
 
 router = DefaultRouter()
 router.register(r'categorias', CategoriaViewSet, 'categoria')
-router.register(r'tipos-activo', TipoActivoViewSet, 'tipo-activo')
+router.register(r'tipos-activo', TipoActivoViewSet, 'tipoactivo')
 router.register(r'activos-fijos', ActivoFijoViewSet, 'activo-fijo')
 
 

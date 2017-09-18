@@ -8,7 +8,7 @@ from activos_fijos.serializers import (
 )
 
 
-class CategoriaViewSet(viewsets.ModelViewSet):
+class CategoriaViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
 

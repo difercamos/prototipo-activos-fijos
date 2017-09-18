@@ -5,7 +5,7 @@ from ubicacion.views import CentroCostosViewSet
 
 
 router = DefaultRouter()
-router.register(r'centros-costos', CentroCostosViewSet, 'centro-costos')
+router.register(r'centros-costos', CentroCostosViewSet, 'centrocostos')
 
 
 urlpatterns = [
