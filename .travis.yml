@@ -12,3 +12,5 @@ deploy:
   app: prototipo-activos-fijos
   on:
     repo: difercamos/prototipo-activos-fijos
+notifications:
+  slack: 'diegofernan17:xoxp-240735564722-240218595617-242788652852-f07bd80bd1b2ff6a30f92756210d7578#activos_fijos'
