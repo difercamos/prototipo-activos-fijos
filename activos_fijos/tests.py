@@ -1,3 +1,4 @@
+import datetime
 from django.test import TestCase
 from django.utils import timezone
 
@@ -12,7 +13,7 @@ class ActivoFijoModelTests(TestCase):
             categoria=categoria
         )
         ActivoFijo.objects.create(
-            fecha_compra=timezone.now() + datetime.timedelta(days=2),
+            fecha_compra=timezone.now(),
             numero_placa='000001',
             tipo_activo=tipo_activo
         )
