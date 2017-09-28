@@ -56,10 +56,7 @@ class ActivoFijo(models.Model):
         null=True,
         related_name='activos'
     )
-    centro_costo = models.ForeignKey(
-        CentroCostos,
-        on_delete=models.CASCADE,
-        related_name='activos',
+    centro_costo = models.ForeignKey(CentroCostos, on_delete=models.CASCADE, related_name='activos',
         null=True,
         blank=True
     )
